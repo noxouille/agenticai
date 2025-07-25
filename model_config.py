@@ -1,14 +1,19 @@
 import os
 from dotenv import load_dotenv
-from autogen import LLMConfig
 
 load_dotenv()
 
+GENERATION_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
+AGENT_MODEL = "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+API_KEY = os.getenv("TOGETHERAI_API_KEY")
+
 config_list = [
   {
-    "model": "gpt-4o-mini",
-    "api_key": os.getenv("OPENAI_API_KEY"),
-    "base_url": os.getenv("OPENAI_API_BASE")
+    "model": AGENT_MODEL,
+    "api_type":"together",
+    "api_key": API_KEY,
+    "stream": False,
   }
 ]
 
