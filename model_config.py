@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 GENERATION_MODEL = "mistralai/Mixtral-8x7B-Instruct-v0.1"
-AGENT_MODEL = "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
+AGENT_MODEL = "google/gemma-3n-E4B-it"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 API_KEY = os.getenv("TOGETHERAI_API_KEY")
 
