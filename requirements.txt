@@ -595,6 +595,10 @@ starlette==0.46.2
     #   mcp
 sentence-transformers
 scikit-learn
+shap
+xgboost
+flask
+flask-limiter
 tenacity==9.1.2
     # via
     #   langchain-community
