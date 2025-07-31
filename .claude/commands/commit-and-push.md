@@ -27,13 +27,13 @@ When this command is invoked:
    -  Approve and commit
    -  Edit the message
    - L Cancel the operation
-5. If approved, run `git commit -m "message"`
+5. If approved, run `git commit -m "message"` (using standard commit format without AI attribution)
 6. Push to remote with `git push`
 7. Provide confirmation with commit hash and push status
 
 ## Commit Message Format
 
-Follow conventional commits:
+Generate standard commit messages following conventional commits format:
 
 - `feat:` new features
 - `fix:` bug fixes  
@@ -44,6 +44,8 @@ Follow conventional commits:
 - `chore:` maintenance tasks
 
 Include scope when relevant (e.g., `feat(security): add CCPA compliance`)
+
+**Important:** Commit messages should be standard and professional, without any AI-specific attribution or co-authoring tags. The commit should appear as if created by the repository owner. (Example: do not use something like docs(claude):)
 
 ## Safety Checks
 
