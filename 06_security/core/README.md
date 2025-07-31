@@ -130,6 +130,69 @@ log_ai_interaction(
 2024-01-15 10:30:45 - INFO - User Query: What is the best investment strategy? | AI Response: Here are some general investment principles...
 ```
 
+### 5. PIPEDA Compliance (`pipeda.py`)
+
+**Class**: `PIPEDAComplianceManager`
+
+**Purpose**: Implements Personal Information Protection and Electronic Documents Act compliance for Canadian privacy law.
+
+**Key Features**:
+- Consent management and withdrawal
+- Access request processing
+- Data portability and export
+- Privacy breach notification
+- Comprehensive audit trails
+
+**Usage**:
+```python
+from pipeda import PIPEDAComplianceManager
+
+# Initialize manager
+pipeda_manager = PIPEDAComplianceManager()
+
+# Record consent
+consent_id = pipeda_manager.record_consent(
+    user_id="user_123",
+    purpose="Email marketing",
+    data_types=["name", "email"],
+    consent_given=True
+)
+
+# Process access request
+access_response = pipeda_manager.process_access_request("user_123")
+```
+
+### 6. CCPA Compliance (`ccpa.py`)
+
+**Class**: `CCPAComplianceManager`
+
+**Purpose**: Implements California Consumer Privacy Act compliance for consumer rights and data privacy.
+
+**Key Features**:
+- Consumer right to know
+- Right to delete personal information
+- Opt-out of data sales
+- Non-discrimination protection
+- Identity verification processes
+
+**Usage**:
+```python
+from ccpa import CCPAComplianceManager, CCPARequestType
+
+# Initialize manager
+ccpa_manager = CCPAComplianceManager()
+
+# Submit consumer request
+request_id = ccpa_manager.submit_consumer_request(
+    consumer_id="consumer_456",
+    request_type=CCPARequestType.KNOW,
+    verification_data={"name": "John Doe", "email": "john@email.com"}
+)
+
+# Process opt-out
+opt_out_id = ccpa_manager.process_opt_out_request("consumer_456")
+```
+
 ## 🔧 Implementation Details
 
 ### GDPR Right to Explanation
@@ -206,6 +269,8 @@ log_ai_interaction(
 - ✅ GDPR Article 22 (automated decisions)
 - ✅ GDPR Article 25 (privacy by design)
 - ✅ GDPR Article 32 (security measures)
+- ✅ PIPEDA compliance (Canadian privacy law)
+- ✅ CCPA compliance (California consumer rights)
 - ✅ Audit trails and accountability
 
 ## 📊 Performance Characteristics

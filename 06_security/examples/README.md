@@ -123,6 +123,94 @@ shap.summary_plot(shap_values)
 - Stakeholder communication
 - Model performance optimization
 
+### 4. PIPEDA Compliance (`pipeda_example.py`)
+
+**Purpose**: Demonstrates Personal Information Protection and Electronic Documents Act compliance for Canadian privacy law.
+
+**Key Features**:
+- E-commerce platform consent management
+- Data access request processing
+- Privacy report generation and data export
+- Consent withdrawal mechanisms
+- Data breach response procedures
+
+**Results Analysis**:
+```
+=== PIPEDA Compliance Example: E-commerce Platform ===
+
+1. Recording Initial Consent
+- Marketing consent recorded: consent_user_12345_20240131_143022
+- Analytics consent recorded: consent_user_12345_20240131_143023
+
+2. Processing Data Access Request
+- Access request ID: req_user_12345_20240131_143024
+- Personal data categories: ['name', 'email', 'phone', 'address', 'purchase_history', 'preferences']
+- Privacy officer contact: privacy@company.com
+
+3. Data Export (Right to Portability)
+- JSON and CSV formats supported
+- Complete data portability compliance
+- User-friendly export mechanisms
+```
+
+**Performance Metrics**:
+- 🇨🇦 **PIPEDA Compliance**: Full Canadian privacy law compliance
+- 📊 **Consent Management**: Granular consent tracking and withdrawal
+- 🔄 **Data Portability**: Multiple export formats (JSON, CSV, XML)
+- 🚨 **Breach Response**: 72-hour notification procedures
+
+**Use Cases**:
+- E-commerce platforms
+- Healthcare organizations
+- Financial services
+- Government agencies
+- Any Canadian business handling personal data
+
+### 5. CCPA Compliance (`ccpa_example.py`)
+
+**Purpose**: Demonstrates California Consumer Privacy Act compliance for consumer rights and data privacy.
+
+**Key Features**:
+- Social media platform consumer rights implementation
+- Data sales opt-out mechanisms
+- Right to know and delete functionality
+- Non-discrimination protection
+- Identity verification processes
+
+**Results Analysis**:
+```
+=== CCPA Compliance Example: Social Media Platform ===
+
+1. Consumer Right to Know Request
+- Categories of data collected: 4 (identifiers, commercial_info, internet_activity, geolocation_data)
+- Data sales to third parties: 1 (MarketingCorp Inc.)
+- Identity verification: Successful
+
+2. Opt-Out of Sale Request
+- Opt-out request processed: optout_consumer_98765_20240131_143025
+- Can sell consumer data: False
+- Opt-out status: active
+
+3. Right to Delete Request
+- Deletion status: completed
+- Categories deleted: internet_activity, geolocation_data
+- Service level maintained: Premium features still available
+```
+
+**Performance Metrics**:
+- 🏛️ **CCPA Compliance**: Full California consumer rights compliance
+- 🔍 **Right to Know**: Comprehensive data disclosure
+- 🗑️ **Right to Delete**: Selective and complete deletion options
+- 🚫 **Opt-Out Protection**: Data sales prevention mechanisms
+- ⚖️ **Non-Discrimination**: Equal service regardless of rights exercise
+
+**Use Cases**:
+- Social media platforms
+- E-commerce websites
+- Advertising networks
+- Data brokers
+- Any business serving California residents
+
 ## 🚀 Running the Examples
 
 ### Prerequisites
@@ -141,17 +229,23 @@ uv run python examples/differential_privacy_example.py
 
 # Run SHAP example
 uv run python examples/shap_example.py
+
+# Run PIPEDA example
+uv run python examples/pipeda_example.py
+
+# Run CCPA example
+uv run python examples/ccpa_example.py
 ```
 
 ## 📊 Comparative Analysis
 
-| Feature | GDPR Example | Differential Privacy Example | SHAP Example |
-|---------|--------------|------------------------------|--------------|
-| **Primary Goal** | Transparency | Privacy Protection | Model Interpretability |
-| **Compliance** | Article 22 | Article 25 | Explainable AI |
-| **Performance Impact** | Minimal | Significant trade-off | Minimal |
-| **Implementation** | Model wrapper | Training modification | Post-training analysis |
-| **Use Case** | Decision explanation | Data protection | Model understanding |
+| Feature | GDPR Example | Differential Privacy Example | SHAP Example | PIPEDA Example | CCPA Example |
+|---------|--------------|------------------------------|--------------|----------------|--------------|
+| **Primary Goal** | Transparency | Privacy Protection | Model Interpretability | Canadian Privacy Law | California Consumer Rights |
+| **Compliance** | Article 22 | Article 25 | Explainable AI | PIPEDA | CCPA |
+| **Performance Impact** | Minimal | Significant trade-off | Minimal | Minimal | Minimal |
+| **Implementation** | Model wrapper | Training modification | Post-training analysis | Data management | Consumer rights platform |
+| **Use Case** | Decision explanation | Data protection | Model understanding | Consent management | Consumer rights |
 
 ## 🔍 Key Insights
 
