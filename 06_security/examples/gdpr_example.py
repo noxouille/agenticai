@@ -7,7 +7,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 # Import the ExplainableModel class from gdpr.py
-from gdpr import ExplainableModel
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from core.gdpr import ExplainableModel
 
 def create_mock_loan_data():
     """
