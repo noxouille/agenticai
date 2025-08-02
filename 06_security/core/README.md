@@ -193,6 +193,47 @@ request_id = ccpa_manager.submit_consumer_request(
 opt_out_id = ccpa_manager.process_opt_out_request("consumer_456")
 ```
 
+### 7. HIPAA Compliance (`hipaa.py`)
+
+**Class**: `HIPAAComplianceManager`
+
+**Purpose**: Implements Health Insurance Portability and Accountability Act compliance for healthcare AI applications.
+
+**Key Features**:
+- Minimum necessary standard validation
+- Safe Harbor de-identification
+- Patient consent management
+- PHI access audit logging
+- Breach detection and assessment
+- Comprehensive compliance reporting
+
+**Usage**:
+```python
+from hipaa import HIPAAComplianceManager
+
+# Initialize manager
+hipaa_manager = HIPAAComplianceManager("HealthcareAI Corp", "CE001")
+
+# Validate minimum necessary access
+validation = hipaa_manager.validate_minimum_necessary(
+    ["patient_id", "diagnosis", "medications"], 
+    "treatment"
+)
+
+# De-identify patient data
+deidentified_data = hipaa_manager.deidentify_data(patient_data)
+
+# Manage patient consent
+consent_record = hipaa_manager.manage_patient_consent(
+    "PT001", "research", True, "2025-12-31T23:59:59"
+)
+
+# Log PHI access
+hipaa_manager.log_phi_access(
+    "DR001", "PT001", ["diagnosis", "medications"], "treatment"
+)
+```
+
 ## 🔧 Implementation Details
 
 ### GDPR Right to Explanation
@@ -271,6 +312,7 @@ opt_out_id = ccpa_manager.process_opt_out_request("consumer_456")
 - ✅ GDPR Article 32 (security measures)
 - ✅ PIPEDA compliance (Canadian privacy law)
 - ✅ CCPA compliance (California consumer rights)
+- ✅ HIPAA compliance (healthcare data protection)
 - ✅ Audit trails and accountability
 
 ## 📊 Performance Characteristics

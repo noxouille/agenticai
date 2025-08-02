@@ -211,6 +211,58 @@ shap.summary_plot(shap_values)
 - Data brokers
 - Any business serving California residents
 
+### 6. HIPAA Compliance (`hipaa_example.py`)
+
+**Purpose**: Demonstrates Health Insurance Portability and Accountability Act compliance for healthcare AI applications.
+
+**Key Features**:
+- Healthcare data minimum necessary standard validation
+- Safe Harbor de-identification of PHI
+- Patient consent management and tracking
+- Comprehensive audit logging for PHI access
+- Breach detection and assessment procedures
+- Complete HIPAA compliance workflow
+
+**Results Analysis**:
+```
+=== HIPAA Compliance Example: Healthcare AI System ===
+
+1. Minimum Necessary Standard Validation
+- Treatment access: ✓ COMPLIANT (approved: diagnosis, medications, allergies)
+- Payment access: ✓ COMPLIANT (approved: insurance_info, billing_codes)
+- Research access: ✗ NON-COMPLIANT (denied: name, ssn - unnecessary)
+
+2. Safe Harbor De-identification
+- Original identifiers removed: 12 (name, address, ssn, phone, etc.)
+- ZIP code truncated: 90210 → 902**
+- Date of birth → age category (90+ for elderly patients)
+
+3. Patient Consent Management
+- Treatment consent: ✓ VALID (no expiration)
+- Research consent: ✓ VALID (expires: 2025-12-31)
+- Marketing consent: ✗ DENIED by patient
+
+4. Audit Trail Generation
+- Total PHI access events: 5
+- Successful accesses: 4 (80%)
+- Failed accesses: 1 (unauthorized attempt blocked)
+```
+
+**Performance Metrics**:
+- 🏥 **HIPAA Compliance**: Full healthcare data protection compliance
+- 🔒 **PHI Protection**: Safe Harbor de-identification removes 18 identifier types
+- 📋 **Consent Management**: Granular consent tracking with expiration dates
+- 📊 **Audit Logging**: Complete access trail for compliance reporting
+- 🚨 **Breach Detection**: Automated severity assessment and notification requirements
+
+**Use Cases**:
+- Electronic Health Record (EHR) systems
+- Healthcare AI diagnostic tools
+- Medical research platforms
+- Telemedicine applications
+- Healthcare data analytics platforms
+- Medical billing systems
+
 ## 🚀 Running the Examples
 
 ### Prerequisites
@@ -235,17 +287,20 @@ uv run python examples/pipeda_example.py
 
 # Run CCPA example
 uv run python examples/ccpa_example.py
+
+# Run HIPAA example
+uv run python examples/hipaa_example.py
 ```
 
 ## 📊 Comparative Analysis
 
-| Feature | GDPR Example | Differential Privacy Example | SHAP Example | PIPEDA Example | CCPA Example |
-|---------|--------------|------------------------------|--------------|----------------|--------------|
-| **Primary Goal** | Transparency | Privacy Protection | Model Interpretability | Canadian Privacy Law | California Consumer Rights |
-| **Compliance** | Article 22 | Article 25 | Explainable AI | PIPEDA | CCPA |
-| **Performance Impact** | Minimal | Significant trade-off | Minimal | Minimal | Minimal |
-| **Implementation** | Model wrapper | Training modification | Post-training analysis | Data management | Consumer rights platform |
-| **Use Case** | Decision explanation | Data protection | Model understanding | Consent management | Consumer rights |
+| Feature | GDPR Example | Differential Privacy Example | SHAP Example | PIPEDA Example | CCPA Example | HIPAA Example |
+|---------|--------------|------------------------------|--------------|----------------|--------------|---------------|
+| **Primary Goal** | Transparency | Privacy Protection | Model Interpretability | Canadian Privacy Law | California Consumer Rights | Healthcare Data Protection |
+| **Compliance** | Article 22 | Article 25 | Explainable AI | PIPEDA | CCPA | HIPAA |
+| **Performance Impact** | Minimal | Significant trade-off | Minimal | Minimal | Minimal | Minimal |
+| **Implementation** | Model wrapper | Training modification | Post-training analysis | Data management | Consumer rights platform | Healthcare compliance system |
+| **Use Case** | Decision explanation | Data protection | Model understanding | Consent management | Consumer rights | PHI protection & audit |
 
 ## 🔍 Key Insights
 
