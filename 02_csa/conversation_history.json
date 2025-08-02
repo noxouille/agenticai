@@ -5,7 +5,7 @@
   },
   {
     "role": "user",
-    "content": "Category: Account Management\nResolution: To reset your password, please follow these steps:\n\n1. Go to the login page of our website or application.\n2. Click on the 'Forgot Password' link.\n3. Enter your registered email address or username.\n4. Click on the 'Reset Password' button.\n5. You will receive an email with a password reset link. Click on this link.\n6. Enter your new password and confirm it by re-entering it in the next field.\n7. Click on the 'Save' or 'Reset Password' button to save your new password.\n\nIf you are having trouble resetting your password or if you do not receive the password reset email, please contact our support team for assistance."
+    "content": "Category: Account Management\nResolution: To reset your password, please follow these steps:\n\n1.  Go to our website's login page.\n2.  Click on the \"Forgot Password\" link, usually located below the login fields.\n3.  Enter the email address associated with your account.\n4.  Check your email inbox for a password reset link. This email should arrive within a few minutes. If you don't see it, check your spam or junk folder.\n5.  Click on the link in the email and follow the instructions to create a new password.\n\nIf you are still having trouble resetting your password, please contact our support team at [support email address] or [phone number] and we'll be happy to assist you.\n\n\n\n"
   },
   {
     "role": "assistant",
@@ -13,6 +13,6 @@
   },
   {
     "role": "user",
-    "content": "It seems like you didn't enter a query. If you have a question or need assistance with something, please feel free to ask, and I'll be happy to help."
+    "content": "What are the features of your premium subscription?\n"
   }
 ]
